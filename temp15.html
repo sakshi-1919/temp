@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function calc() {
+            let a = Number(document.getElementById('n1').value);
+            let b = Number(document.getElementById('n2').value);
+            let str = `${a}+${b}=${a+b}<br>`; //or d1.innerHTML=`${a}+${b}=${a+b}`// or d1.innerHTML=a+b;  
+            str = str +`${a}-${b}=${a-b}<br>`;// or d2.innerHTML=`${a}-${b}=${a-b}`// or d2.innerHTML=a-b;
+            str = str +`${a}x${b}=${a*b}<br>`;// or d3.innerHTML=`${a}*${b}=${a*b}` // or d3.innerHTML=a*b;
+            str = str +`${a}/${b}=${a/b}<br>`;//or d4.innerHTML=`${a}/${b}=${a/b}`// or d4.innerHTML=a/b;
+            d1.innerHTML=str;
+        //document.write("My name is "+name) or
+        //document.write(`My name is ${name}`)
+        }
+    </script>
+</head>
+<body>
+    
+            <p><input type="number"  id="n1" placeholder="number1"></p>
+            <p><input type="number"  id="n2" placeholder="number2"></p>
+            <button onclick="calc()">Submit</button>
+            <div id ="d1"></div>
+</body>
+</html>

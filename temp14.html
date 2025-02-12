@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container input, .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border-radius:10px;
+        }
+
+        .login-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form>
+        <h2>Login</h2>
+        <input type="text" required id="username" placeholder="User Name">
+        <input type="password" required id="password" placeholder="Password">
+        <button onclick="login()">Log in</button>
+    </form>
+    </div>
+
+    <script>
+        function login() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            if(username =="" || password ==""){
+                alert("User Name cannot be blank")
+            }
+            else if (username === 'John' && password === '1234') {
+                alert('Welcome John');
+            } else {
+                alert('Access Denied');
+            }
+        }
+    </script>
+</body>
+</html>

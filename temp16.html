@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function details() {
+            let a = document.getElementById('name').value;
+            let b = Number(document.getElementById('n1').value);
+            let c = document.getElementById('q1').value;
+            let d = document.getElementById('s1').value;
+            let str = `${a} | ${b} | ${c} | ${d}`;
+            d1.innerHTML = str;
+            
+        }
+    </script>
+</head>
+<body>
+    <p><input type="text" id="name" placeholder="Name"></p>
+    <p><input type="number" id="n1" placeholder="Age"></p>
+    <p><input type="text" id="q1" placeholder="Qualification"></p>
+    <p><input type="text" id="s1" placeholder="State"></p>
+    <button onclick="details()">Submit</button>
+    <div id ="d1"></div>
+</body>
+</html>

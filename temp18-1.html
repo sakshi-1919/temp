@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData(){
+            let a = document.getElementById('name').value;
+            let b = document.getElementById('email').value;
+            let c = document.getElementById('password').value;
+            let d = document.getElementById('dob').value;
+            let str = `${a} , ${b} , ${c} , ${d} `;
+            data.innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p><input type = "text" id = "name" placeholder = "Name"></p>
+    <p><input type = "text" id = "email" placeholder = "Email Address"></p>
+    <p><input type = "password" id = "password" placeholder = "Password"></p>
+    <p><input type="date" id="dob" placeholder="Date of Birth"></p>
+    <button onclick = "showData()">Register</button>
+    <div id = "data"></div>
+</body>
+</html>
